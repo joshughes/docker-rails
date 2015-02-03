@@ -1,9 +1,9 @@
 FROM ruby:2.1.5-wheezy
 
-RUN curl -sL https://deb.nodesource.com/setup | bash -
-RUN apt-get update && apt-get install -y nodejs
-RUN apt-get update && apt-get install -y imagemagick
-RUN apt-get update && apt-get install -y nginx
+RUN curl -sL https://deb.nodesource.com/setup | bash - && \
+    apt-get update && \
+    apt-get install -y nodejs imagemagick nginx
+
 
 ADD . /usr/src/app
 
